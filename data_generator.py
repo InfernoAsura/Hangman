@@ -6,7 +6,7 @@ nltk.download('words')
 
 word_list = words.words()
 
-num_words = 100
+num_words = 100000
 
 random_words = random.choices(word_list, k=num_words)
 
