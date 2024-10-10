@@ -10,3 +10,5 @@ First, the algorithm computes the frequency of each letter from a given training
 This method is the most simplest way (not counting random guessing algorithm) to play hangman game. The Accuracy achieved from this method on the above train and test data is: 15.37% 
 
 Here is the colab file: https://colab.research.google.com/drive/1ewwVwVZTlTrF3Bm6DPQA-KnDPTjn9tPw?usp=sharing
+
+The second approach I tried was some modification I made to the first approach. For each test word, instead of using the overall letter frequencies, the algorithm narrows down the frequency calculations to only include training words that have the same length as the test word. This way, the model makes guesses based on a smaller set of words. I thought it might work, but there are some flaws in this approach. First, if the test and train data is disjoint, then it doesn't matter if I do this modification, because the train data might have, say, 'e' as the most frequent letter, but the testing data may contain words that might not even have 'e' in them. The accuracy achieved from this method is: 15.46%
